@@ -28,6 +28,11 @@ interface Article {
   featured: boolean
 }
 
+interface WritingsSectionProps {
+  initialArticles?: Article[]
+  initialError?: string | null
+}
+
 // Function to get primary category from tags
 const getPrimaryCategory = (tags: string[]): string => {
   const categoryMap: { [key: string]: string } = {
@@ -69,22 +74,31 @@ const transformBlogPost = (post: BlogPost, index: number): Article => ({
   featured: index < 2 // Mark first 2 posts as featured
 })
 
-export default function WritingsSection() {
-  const [articles, setArticles] = useState<Article[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)  // Fetch blog posts from API
+export default function WritingsSection({ 
+  initialArticles = [], 
+  initialError = null 
+}: WritingsSectionProps = {}) {
+  const [articles, setArticles] = useState<Article[]>(initialArticles)
+  const [loading, setLoading] = useState(!initialArticles.length)
+  const [error, setError] = useState<string | null>(initialError)  // Fetch blog posts from API (with ISR optimization)
   useEffect(() => {
+    // Skip fetching if we already have initial data
+    if (initialArticles.length > 0) {
+      return
+    }
+
     const fetchBlogPosts = async () => {
       try {
         setLoading(true)
         
-        // Use our internal API route to avoid CORS issues
+        // Use our internal API route with ISR optimization
         const response = await fetch('/api/blog', {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
           },
+          next: { revalidate: 300 }, // Client-side cache for 5 minutes
         })
         
         if (!response.ok) {
@@ -134,7 +148,7 @@ export default function WritingsSection() {
     }
 
     fetchBlogPosts()
-  }, [])
+  }, [initialArticles.length])
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)

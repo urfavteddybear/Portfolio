@@ -1,4 +1,4 @@
-// Server component with ISR optimization
+// Server component wrapper for ISR optimization
 import { getBlogPosts } from '@/lib/blog'
 import ClientHome from './ClientHome'
 

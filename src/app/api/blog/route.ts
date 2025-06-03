@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
         'Content-Type': 'application/json',
         'User-Agent': 'Portfolio-Site/1.0',
       },
-      cache: 'no-store', // Don't cache in development
+      next: { revalidate: 300 }, // ISR: Revalidate every 5 minutes
     })
 
     if (!response.ok) {
@@ -36,11 +36,11 @@ export async function GET(request: NextRequest) {
       throw new Error('Invalid API response format')
     }
 
-    // Return the data
+    // Return the data with ISR headers
     return NextResponse.json(data, {
       status: 200,
       headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=59',
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600',
       },
     })
 
