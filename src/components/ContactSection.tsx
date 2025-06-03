@@ -61,9 +61,8 @@ export default function ContactSection() {
           className="text-center mb-16"
         >          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl mb-4">
             Get In Touch
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300">
-            Have a project in mind or want to collaborate? I'd love to hear from you.
+          </h2>          <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+            Have a project in mind or want to collaborate? I&apos;d love to hear from you.
           </p>
         </motion.div>
 

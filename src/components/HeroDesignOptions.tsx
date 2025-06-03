@@ -1,6 +1,8 @@
 // Alternative Hero Section Designs
 // Copy one of these into HeroSection.tsx to try different styles
 
+import { motion } from 'framer-motion';
+
 // Option 1: Minimal Typography Focus
 export const HeroOption1 = () => {
   return (
@@ -82,9 +84,8 @@ export const HeroOption2 = () => {
                     Available for hire
                   </span>
                 </div>
-                
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Hey, I'm{' '}
+                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Hey, I&apos;m{' '}
                   <span className="text-primary-600">Alex</span>
                   <br />
                   Full-Stack Developer
@@ -95,9 +96,8 @@ export const HeroOption2 = () => {
                   Specialized in React, Next.js, and Node.js with 5+ years of experience.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors">
-                    Let's work together
+                <div className="flex flex-col sm:flex-row gap-4">                  <button className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors">
+                    Let&apos;s work together
                   </button>
                   <button className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                     View my work
@@ -154,9 +154,8 @@ export const HeroOption3 = () => {
               <span className="block">Build.</span>
               <span className="block text-primary-600">Deploy.</span>
             </h1>
-            
-            <p className="text-xl text-gray-600 mb-8">
-              I'm Alex, a full-stack developer passionate about creating 
+              <p className="text-xl text-gray-600 mb-8">
+              I&apos;m Alex, a full-stack developer passionate about creating 
               exceptional digital experiences.
             </p>
           </div>

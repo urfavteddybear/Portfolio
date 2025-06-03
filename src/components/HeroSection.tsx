@@ -47,7 +47,7 @@ export default function HeroSection() {  const scrollToProjects = () => {
             </motion.div>
             
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl">
-              <span className="block">                <span className="text-gray-600 dark:text-gray-300">Hi, I'm</span>{' '}
+              <span className="block">                <span className="text-gray-600 dark:text-gray-300">Hi, I&apos;m</span>{' '}
                 <span className="relative">
                   <span className="relative z-10 bg-gradient-to-r from-primary-600 to-primary-800 dark:from-primary-400 dark:to-primary-600 bg-clip-text text-transparent">
                     Wahyu Putra
@@ -79,7 +79,7 @@ export default function HeroSection() {  const scrollToProjects = () => {
                 <WaveIcon className="w-20 h-4 text-primary-300 dark:text-primary-600" />
               </span>
             </span>
-            . Let's build something amazing together.
+            . Let&apos;s build something amazing together.
           </motion.p><motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
