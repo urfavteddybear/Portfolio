@@ -25,7 +25,7 @@ export default function HeroSection() {  const scrollToProjects = () => {
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-tl from-primary-75/25 to-transparent dark:from-primary-800/15 dark:to-transparent rounded-full blur-3xl" />
       </div>
       
-      <div className="mx-auto max-w-4xl text-center relative z-10">{/* Main heading */}
+      <div className="mx-auto max-w-4xl text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
