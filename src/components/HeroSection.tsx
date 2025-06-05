@@ -20,7 +20,6 @@ export default function HeroSection() {  const scrollToProjects = () => {
         }}></div>
       </div>
       
-      {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-gradient-to-br from-primary-100/30 to-transparent dark:from-primary-900/20 dark:to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-tl from-primary-75/25 to-transparent dark:from-primary-800/15 dark:to-transparent rounded-full blur-3xl" />

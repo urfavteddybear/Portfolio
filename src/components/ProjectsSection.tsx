@@ -6,43 +6,31 @@ import { ArrowTopRightOnSquareIcon, CodeBracketIcon } from '@heroicons/react/24/
 const projects = [
   {
     id: 1,
-    title: "SaaS Dashboard Platform",
-    description: "A comprehensive dashboard platform for managing business analytics, user management, and real-time data visualization. Built with modern technologies for scalability and performance.",
-    image: "/api/placeholder/600x400",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "NextAuth.js"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Point of Sales System",
+    description: "A comprehensive Point of Sales (POS) system designed for retail businesses. Features inventory management, sales tracking, customer management, and detailed reporting. Built with a clean and intuitive interface for efficient business operations.",
+    image: "/images/point-of-sales.webp",
+    technologies: ["PHP", "Bootstrap", "AdminLTE", "MySQL"],
+    liveUrl: "https://pos.wahyuputra.biz.id",
+    githubUrl: "https://github.com/urfavteddybear/Point-Of-Sales.git",
     featured: true
-  },
-  {
+  },  {
     id: 2,
-    title: "AI-Powered Content Generator",
-    description: "An intelligent content generation platform that leverages AI to create blog posts, social media content, and marketing copy. Features real-time collaboration and export capabilities.",
-    image: "/api/placeholder/600x400",
-    technologies: ["React", "Node.js", "OpenAI API", "MongoDB", "Express", "Socket.io"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Recipe Blog Platform",
+    description: "A dynamic recipe blog platform where users can discover, share, and manage cooking recipes. Features recipe browsing, detailed cooking instructions, ingredient lists, and user-friendly recipe management. Built with server-side rendering for optimal performance.",
+    image: "/images/cooking-blog.webp",
+    technologies: ["Express.js", "EJS", "Node.js", "JavaScript"],
+    liveUrl: "https://recipe-blog.wahyuputra.biz.id",
+    githubUrl: "https://github.com/urfavteddybear/recipe-blog",
     featured: true
-  },
-  {
+  },  {
     id: 3,
-    title: "Real Estate Marketplace",
-    description: "A modern real estate platform connecting buyers, sellers, and agents. Features advanced search, virtual tours, and integrated communication tools.",
-    image: "/api/placeholder/600x400",
-    technologies: ["Vue.js", "Laravel", "MySQL", "Stripe", "Google Maps API"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: false
-  },
-  {
-    id: 4,
-    title: "Productivity Mobile App",
-    description: "A cross-platform mobile application for task management and productivity tracking with offline support and cloud synchronization.",
-    image: "/api/placeholder/600x400",
-    technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: false
+    title: "Minimalist Tech Blog",
+    description: "A minimalist blog about web development, design, and technology. Built with Next.js and markdown for simple content management. Features clean design, fast performance, and easy content publishing workflow.",
+    image: "/images/blog.webp",
+    technologies: ["Next.js", "Markdown", "TypeScript"],
+    liveUrl: "https://blog.wahyuputra.biz.id",
+    githubUrl: "https://github.com/urfavteddybear/wpcreative-blog",
+    featured: true
   }
 ]
 
@@ -76,13 +64,19 @@ export default function ProjectsSection() {
               viewport={{ once: true }}              className={`group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 ${
                 project.featured ? 'md:grid md:grid-cols-2 md:gap-8' : ''
               }`}
-            >
-              {/* Project image */}
+            >              {/* Project image */}
               <div className={`relative overflow-hidden ${project.featured ? 'h-64 md:h-full' : 'h-64'}`}>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-primary-600/20 z-10" />
-                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                  <CodeBracketIcon className="h-20 w-20 text-gray-400" />
-                </div>
+                {project.image.startsWith('/images/') ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                    <CodeBracketIcon className="h-20 w-20 text-gray-400" />
+                  </div>
+                )}
                 
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-center justify-center">
