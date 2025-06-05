@@ -55,7 +55,7 @@ export default function HeroSection() {  const scrollToProjects = () => {
                 </span>
               </span>
               <span className="block mt-2">
-                <span className="text-gray-900 dark:text-white">DevOps</span>{' '}
+                <span className="text-gray-900 dark:text-white">a DevOps</span>{' '}
                 <span className="relative">
                   <span className="relative z-10">Engineer</span>
                   <span className="absolute inset-0 -left-2 top-1 z-0 block h-[38px] w-full rotate-[-1deg] bg-gradient-to-r from-primary-200/60 to-primary-300/60 dark:from-primary-800/60 dark:to-primary-700/60 sm:h-[54px] lg:h-[60px]"></span>
@@ -67,19 +67,19 @@ export default function HeroSection() {  const scrollToProjects = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl lg:mt-12"
-          >            I craft{' '}
+          >            I build and optimize{' '}
             <span className="relative">
-              <span className="font-semibold text-gray-900 dark:text-white">scalable infrastructure solutions</span>
+              <span className="font-semibold text-gray-900 dark:text-white">reliable server infrastructure</span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-400 dark:to-primary-500"></span>
             </span>
-            {' '}using modern technologies like{' '}
+            {' '}with expertise in{' '}
             <span className="relative">
-              <span className="font-medium text-primary-600 dark:text-primary-400">Docker, Kubernetes & Linux</span>
+              <span className="font-medium text-primary-600 dark:text-primary-400">Docker, Linux & Cloud Technologies</span>
               <span className="absolute left-0 top-8 hidden text-sm text-gray-500 dark:text-gray-400 lg:block">
                 <WaveIcon className="w-20 h-4 text-primary-300 dark:text-primary-600" />
               </span>
             </span>
-            . Let&apos;s build something amazing together.
+            . Ready to help scale your infrastructure.
           </motion.p><motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

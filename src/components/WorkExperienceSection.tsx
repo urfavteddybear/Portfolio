@@ -6,48 +6,62 @@ import { CalendarIcon, MapPinIcon } from '@heroicons/react/24/outline'
 const experiences = [
   {
     id: 1,
-    company: "TechFlow Solutions",
-    position: "Senior Full Stack Developer",
-    duration: "2022 - Present",
-    location: "Remote",
-    description: "Leading development of enterprise-level web applications and mentoring junior developers. Specialized in React ecosystem, Node.js backend services, and cloud infrastructure on AWS.",
+    company: "PT Bangun Inovasi Teknologi",
+    position: "Content Creator Internship",
+    duration: "2022 (6 months)",
+    location: "Work From Home",
+    description: "Collaborated with the marketing team to create engaging visual content for social media platforms. Focused on developing Instagram content that aligned with the company's brand identity and marketing objectives.",
     achievements: [
-      "Architected and built 3 major SaaS applications serving 10k+ users",
-      "Led migration to microservices architecture, improving system reliability by 45%",
-      "Mentored 8 junior developers and established coding standards for the team",
-      "Reduced application bundle size by 60% through code splitting and optimization"
+      "Created compelling Instagram content that increased engagement",
+      "Developed visual content strategy for social media campaigns",
+      "Collaborated effectively with team members in remote work environment",
+      "Maintained consistent brand identity across all content"
     ],
-    technologies: ["React", "Next.js", "Node.js", "TypeScript", "AWS", "PostgreSQL", "Docker", "Kubernetes"]
+    technologies: ["Adobe Illustrator", "Canva", "Instagram"]
   },
   {
     id: 2,
-    company: "InnovateLab",
-    position: "Full Stack Developer",
-    duration: "2020 - 2022",
-    location: "San Francisco, CA",
-    description: "Developed modern web applications for startups and established companies. Focused on creating scalable solutions with great user experience and performance optimization.",
+    company: "EduKoding",
+    position: "Learning Module Developer Internship",
+    duration: "2022 (6 months)",
+    location: "Work From Home",
+    description: "Developed educational content and learning modules for students at EduKoding. Created interactive learning materials and visual designs to enhance the educational experience for programming students.",
     achievements: [
-      "Built 15+ responsive web applications using React and Vue.js",
-      "Implemented real-time features using WebSocket technology",
-      "Optimized database queries reducing response times by 70%",
-      "Collaborated with design team to create pixel-perfect implementations"
+      "Designed and developed comprehensive learning modules for students",
+      "Created interactive educational content using visual programming tools",
+      "Collaborated with educational team to improve learning outcomes",
+      "Delivered high-quality educational materials within project timelines"
     ],
-    technologies: ["React", "Vue.js", "JavaScript", "Python", "Django", "PostgreSQL", "Redis", "AWS"]
+    technologies: ["Adobe Illustrator", "Scratch Desktop"]  },
+    {
+    id: 3,
+    company: "INSTIKI Developer Club",
+    position: "Backend Beginner Mentor",
+    duration: "2024 - 2025",
+    location: "INSTIKI",
+    description: "Mentored students in backend development fundamentals through campus extracurricular activities. Taught API development, database design, and server-side programming concepts to help students build strong foundation in backend technologies.",
+    achievements: [
+      "Mentored beginner students in backend development concepts and practices",
+      "Designed and delivered comprehensive curriculum for API development",
+      "Taught database design principles and MySQL implementation",
+      "Guided students through hands-on projects and real-world applications"
+    ],
+    technologies: ["PHP", "MySQL", "API"]
   },
   {
-    id: 3,
-    company: "WebCraft Agency",
-    position: "Frontend Developer",
-    duration: "2019 - 2020",
-    location: "Austin, TX",
-    description: "Started my professional journey developing client websites and learning modern web development practices. Gained solid foundation in frontend technologies and agile development.",
+    id: 4,
+    company: "PT Invilove Digital",
+    position: "Wedding Invitation Maker",
+    duration: "2024 - Present",
+    location: "Work From Home",
+    description: "Creating beautiful and personalized wedding invitations for clients using WordPress platform. Combining web development skills with creative design to deliver unique digital invitation experiences that capture couples' special moments.",
     achievements: [
-      "Delivered 25+ client websites with 100% on-time completion rate",
-      "Learned and implemented modern JavaScript frameworks",
-      "Contributed to company's internal component library",
-      "Improved website performance scores by 40% on average"
+      "Designed and developed custom wedding invitations using WordPress",
+      "Enhanced invitation designs with professional photo editing techniques",
+      "Delivered personalized invitation solutions for diverse client requirements",
+      "Maintained high client satisfaction through creative and timely delivery"
     ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "React", "SASS", "WordPress", "PHP", "MySQL"]
+    technologies: ["WordPress", "Adobe Photoshop", "Elementor"]
   }
 ]
 
@@ -63,17 +77,15 @@ export default function WorkExperienceSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl mb-4">
-            Work Experience
+            Experience
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300">
-            My professional journey and the experiences that shaped my career as a developer.
+            My professional journey and the experiences that shaped my career.
           </p>
         </motion.div>        {/* Experience timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-6 md:left-1/2 md:transform md:-translate-x-px h-full w-0.5 bg-gray-300 dark:bg-gray-600" />
-
-          <div className="space-y-12">
+          <div className="absolute left-6 md:left-1/2 md:transform md:-translate-x-px h-full w-0.5 bg-gray-300 dark:bg-gray-600" />          <div className="space-y-12">
             {experiences.map((experience, index) => (
               <motion.div
                 key={experience.id}
@@ -86,7 +98,7 @@ export default function WorkExperienceSection() {
                 } flex-col md:space-x-8`}
               >                {/* Timeline dot */}
                 <div className="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 w-3 h-3 bg-primary-500 rounded-full border-4 border-white dark:border-gray-900 z-10" />                {/* Content card */}
-                <div className={`w-full md:w-5/12 pl-16 pr-4 md:pl-0 md:pr-0 ${index % 2 === 0 ? '' : 'md:text-right'}`}><motion.div
+                <div className="w-full md:w-5/12 pl-16 pr-4 md:pl-0 md:pr-0"><motion.div
                     whileHover={{ scale: 1.02 }}
                     className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
                   >                    {/* Company and position */}
